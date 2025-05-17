@@ -2,13 +2,13 @@
 CRUD app code and .md file explaining code with pictures
 This is a basic CRUD (Create, Read, Update, Delete) web application built with Flask (or Django/FastAPI).
 
-## 📸 Screenshot
+##  Screenshot
 
 ![CRUD UI](static/images/crud-ui.png)
 
 ---
 
-## 🔧 Features
+##  Features
 
 - Create new records
 - Read/display existing records
@@ -17,15 +17,4 @@ This is a basic CRUD (Create, Read, Update, Delete) web application built with F
 
 ---
 
-## 💡 How it Works
 
-### 1. Create
-
-```python
-@app.route('/create', methods=['POST'])
-def create():
-    name = request.form['name']
-    user = User(name=name)
-    db.session.add(user)
-    db.session.commit()
-    return redirect('/')
